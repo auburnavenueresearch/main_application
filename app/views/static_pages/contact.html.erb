@@ -2,21 +2,6 @@
 
 <h1>Links & Resources</h1>
 
-	<%= form_tag("http://api.developer.sears.com/v2.1/products/search/Sears/json/keyword/#{:q}?apikey=ktnenNM4NHI3gHkPdD11r0YBN4DkdqyA", :method => "get") do %>
-  			<%= label_tag(:q, "Search for:") %>
-  			<%= text_field_tag(:q) %>
-  			<%= submit_tag("Find a tool") %>
-	<% end %>
-
-	<div class ="hero-unit center">
-
-	<%= @name %>
-	<%= link_to image_tag(@image, alt: "Craftsman"), 'http://www.craftsman.com/' %>
-	<%= @price %>
-
-	</div>
-
-
 	<h3>Pages you may like:</h3>
 
 	<p><a href="http://www.pinterest.com/amerifirst/pinterest-diy-home-improvements/">Amerifirst on Pinterest</a></p>
@@ -29,6 +14,6 @@
 
 	<p><a href="http://www.pinterest.com/family_handyman/">Family Handyman on Pinterest</a></p>
 
-	<p><a href="http://www.familyhandyman.com/">Family Handyman</a></p>
+	
 
  
