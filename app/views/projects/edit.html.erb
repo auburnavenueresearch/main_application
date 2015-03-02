@@ -1,0 +1,27 @@
+<% provide(:title, 'Edit Project') %>
+
+<h1>Edit Project</h1>
+<body id="home">
+	<div class="hero-unit">
+		<div class="row">
+			<div class="span6 offset3">
+				<%= form_for(@project) do |f| %>
+					<%= render 'shared/error_messages', object: f.object %>
+					<div class="field">
+						<%= f.text_area :project_title, placeholder: "New title..." %>
+						<%= f.text_area :description, placeholder: "New description..." %>
+						<%= f.text_area :tools, placeholder: "What tools do yoy need?" %>
+						<%= f.text_area :materials, placeholder: "What materials do you need?" %>
+						<%= f.text_area :instructions, placeholder: "Update status..." %>
+						<%= f.file_field :image %>
+						<%= f.file_field :image1 %>
+						<%= f.file_field :image2 %>
+						<%= f.file_field :image3 %>
+
+					</div>
+					<%= f.submit "Save Changes", class: "btn btn-large btn-primary" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</body>

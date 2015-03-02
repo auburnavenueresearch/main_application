@@ -1,0 +1,32 @@
+<% provide(:title, "#{@user.first_name} #{@user.last_name}") %>
+
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+				<div class="hero-unit">
+					<%= image_tag @user.pic_url %>
+				</div>
+				<p>
+				<%= @user.first_name %> <%= @user.last_name %>
+			</p>
+			</h1>
+			<p> 
+				<%= @user.email %><br>
+			</p>
+		</section>
+		<section>
+			<%= render 'shared/stats' %>
+		</section>
+	</aside>
+	<div class="span8">
+		<%= render 'follow_form' if signed_in? %>
+		<% if @user.posts.any? %>
+			<h3>Posts (<%= @user.posts.count %>)</h3>
+			<ol class="posts">
+				<%= render @posts %>
+			</ol>
+			<%= will_paginate @posts %>
+		<% end %>
+	</div>	
+</div> 
