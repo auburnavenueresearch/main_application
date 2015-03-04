@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	if @user.save
       sign_in @user
-  		flash[:success] = "Do it Yourslelf with Craftsman!"
+  		flash[:success] = "Welcome to Auburn Avenue Research Company!"
   		redirect_to @user
   	else
   		render 'new'
