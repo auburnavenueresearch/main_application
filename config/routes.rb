@@ -15,9 +15,9 @@ SteamTruckApp::Application.routes.draw do
   match 'projects/new',   to: 'projects#new',           via: 'get'
   match '/signin',        to: 'sessions#new',           via: 'get'
   match '/signout',       to: 'sessions#destroy',       via: 'delete'
-  match '/help',          to: 'static_pages#help',      via: 'get'
+  match '/team',          to: 'static_pages#team',      via: 'get'
   match '/about',         to: 'static_pages#about',     via: 'get'
-  match '/contact',       to: 'static_pages#contact',   via: 'get'
+  match '/library',       to: 'static_pages#library',   via: 'get'
   match '/near_you',      to: 'static_pages#near_you',  via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -11,18 +11,13 @@ class StaticPagesController < ApplicationController
     @address = store1['store_info']['address']
   end
 
-  def help
+  def team
   end
 
   def about
   end
 
-  def contact
-    results = HTTParty.get("http://api.developer.sears.com/v2.1/products/search/Sears/json/keyword/wrench?apikey=ktnenNM4NHI3gHkPdD11r0YBN4DkdqyA")
-    product1 = results
-    @name = product1['SearchResults']['Products'][1]['Description']['Name']
-    @image = product1['SearchResults']['Products'][1]['Description']['ImageURL']
-    @price = product1['SearchResults']['Products'][1]['Price']['DisplayPrice']
+  def library
   end
    
 end
