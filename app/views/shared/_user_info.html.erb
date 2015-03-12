@@ -1,9 +1,9 @@
-<h1>
+<h3>
 	<%= "#{current_user.first_name} #{current_user.last_name}" %>
-</h1>
+</h3>
 <span>
-	<%= link_to "view my profile", current_user %>
+	<small><%= link_to "view my profile", current_user %></small>
 </span>
 <span>
-	<%= pluralize(current_user.posts.count, "post") %>
+	<small><%= pluralize(current_user.posts.count, "post") %></small>
 </span>
