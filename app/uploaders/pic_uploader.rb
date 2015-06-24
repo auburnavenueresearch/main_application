@@ -18,7 +18,7 @@ class PicUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    image_name = [version_name, 'logo.jpg'].compact.join('_')
+    image_name = [version_name,'head_3.png'].compact.join('_')
     ActionController::Base.helpers.asset_path "fallback/#{image_name}"
   end
 
