@@ -18,7 +18,7 @@ SteamTruckApp::Application.routes.draw do
   match '/team',          to: 'static_pages#team',      via: 'get'
   match '/about',         to: 'static_pages#about',     via: 'get'
   match '/library',       to: 'static_pages#library',   via: 'get'
-  match '/near_you',      to: 'static_pages#near_you',  via: 'get'
+  match '/services',      to: 'static_pages#services',  via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
