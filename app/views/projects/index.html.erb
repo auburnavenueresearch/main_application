@@ -3,8 +3,8 @@
 <body id="home">
 <div class="hero-unit">
 <% @projects.each do |project| %>
-	<ul>	
-			<li><%= link_to "#{project.project_title}", project %> | <%= project.description %> | <%= time_ago_in_words(project.created_at) %> ago</li> 
+	<ul>
+			<li><%= link_to "#{project.project_title}", project %> | <%= project.description %> | <%= time_ago_in_words(project.created_at) %> ago</li>
 
 	</ul>
 <% end %>
