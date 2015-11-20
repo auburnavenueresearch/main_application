@@ -9,5 +9,7 @@
 	</ul>
 <% end %>
 </div>
-	<%= link_to "New Project", new_project_path, class: "btn btn-large btn-primary" %>
+	<% if current_user %>
+		<%= link_to "New Project", new_project_path, class: "btn btn-large btn-primary" %>
+	<% end %>
 </body>
