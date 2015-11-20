@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
 	belongs_to :user
-	default_scope -> { order('created_at DESC') }
+	default_scope -> { order('project_title ASC') }
 	validates :project_title, presence: true, length: { maximum: 90 }
 	validates :description, presence: true, length: { maximum: 800 }
 	validates :tools, presence: true, length: { maximum: 300 }
