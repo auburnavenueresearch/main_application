@@ -12,7 +12,7 @@ SteamTruckApp::Application.routes.draw do
   root "static_pages#home"
   match '/signup',        to: 'users#new',              via: 'get'
   match '/projects',      to: 'projects#index',         via: 'get'
-  match 'projects/new',   to: 'projects#new',           via: 'get'
+  match 'projects/new',   to: 'projects#new',           via: 'post'
   match '/signin',        to: 'sessions#new',           via: 'get'
   match '/signout',       to: 'sessions#destroy',       via: 'delete'
   match '/team',          to: 'static_pages#team',      via: 'get'
