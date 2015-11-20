@@ -4,7 +4,7 @@
 			<%= link_to "The Auburn Avenue Research Company", root_path, id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "Home",		root_path %></li>
+					<li><%= link_to "home",		root_path %></li>
 					<!--<li><%= link_to "Team",	team_path %></li> -->
 					<li><%= link_to "docs", project_index_path %></li>
 					<li><%= link_to "services", services_path %></li>
@@ -12,14 +12,14 @@
 					<% if signed_in? %>
 						<li><%= link_to "Users",	users_path %></li>
 						<li id="fat-menu" class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">account <b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
-								<li><%= link_to "Profile", current_user %></li>
-								<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+								<li><%= link_to "profile", current_user %></li>
+								<li><%= link_to "settings", edit_user_path(current_user) %></li>
 								<li class="divider"></li>
 								<li>
-									<%= link_to 'Sign out', signout_path, method: "delete" %>
+									<%= link_to 'sign out', signout_path, method: "delete" %>
 								</li>
 							</ul>
 						</li>
