@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
 		@project = current_user.projects.build if signed_in?
 	end
 
-	def show 
+	def show
     @project = Project.find(params[:id])
 	end
 
@@ -23,9 +23,9 @@ class ProjectsController < ApplicationController
   		else
   			render 'new'
   		end
-  	end 
+  	end
 
-  	def edit 
+  	def edit
   	end
 
   	def update
@@ -46,8 +46,8 @@ class ProjectsController < ApplicationController
   	private
 
   		def project_params
-  		params.require(:project).permit(:project_title,:description, :tools, :materials, 
-  										:instructions, :image, :image1, :image2, :image3) 
+  		params.require(:project).permit(:project_title,:description, :tools, :materials,
+  										:instructions, :image, :image1, :image2, :image3)
   		end
 
       def correct_user

@@ -22,9 +22,9 @@ class UsersController < ApplicationController
   	else
   		render 'new'
   	end
-  end 
+  end
 
-  def edit 
+  def edit
   end
 
   def update
@@ -63,14 +63,14 @@ class UsersController < ApplicationController
   private
 
   	def user_params
-  		params.require(:user).permit(:first_name, :last_name, :email, 
-  										:password, :password_confirmation, :pic) 
+  		params.require(:user).permit(:first_name, :last_name, :email,
+  										:password, :password_confirmation, :pic)
   	end
 
     def signed_in_user
       unless signed_in?
         store_location
-        redirect_to signin_url, notice: "Please sign in." 
+        redirect_to signin_url, notice: "Please sign in."
       end
     end
 
