@@ -8,8 +8,7 @@
 
 	</ul>
 <% end %>
-
-<% if current_user?(post.user) %>
-	</div>
+</div>
+<% if signed_in? %>
 	<%= link_to "New Project", new_project_path, class: "btn btn-large btn-primary" %>
-	</body>
+</body>
